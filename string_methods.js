@@ -25,3 +25,19 @@ console.log("charcter at 0th position is:"+str.charAt(0));
 var txt = "Hello";
 console.log("text split:"+txt.split("")); 
 
+
+
+output:
+C:\Users\tanus\.vscode\extensions>node string_methods.js
+Length of string    Please locate where 'locate' occurs!   is 36
+position of 'locate' in the given string is:7
+last occurence 'locate' in given string21
+Slice:locate
+substringlocate
+replace():Please locate replaced where 'locate' occurs!
+string in Uppercase:PLEASE LOCATE WHERE 'LOCATE' OCCURS!
+string in lowercase:please locate where 'locate' occurs!
+concatenated string:Please locate where 'locate' occurs! concatenation
+Hello World!
+charcter at 0th position is:P
+text split:H,e,l,l,o
