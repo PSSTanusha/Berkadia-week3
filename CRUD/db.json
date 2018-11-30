@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "first_name": "Tanusha",
+      "last_name": "Padmanabhuni",
+      "Branch": "CSE",
+      "Section": "B5",
+      "cgpa": 9
+    },
+    {
+      "id": 2,
+      "first_name": "Anusha",
+      "last_name": "G",
+      "Branch": "ECE",
+      "Section": "A2",
+      "cgpa": 9.3
+    },
+    {
+      "id": 3,
+      "first_name": "Alen",
+      "last_name": "John",
+      "Branch": "CSE",
+      "Section": "B1",
+      "cgpa": 7.3
+    }
+  ]
+}
