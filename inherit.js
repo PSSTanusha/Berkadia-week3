@@ -18,3 +18,9 @@ let newarr=new Array(1,2,3,4);
 Object.getPrototypeOf(newarr);
 console.log(person);
 console.log(person.hodname);
+
+
+output:
+C:\Users\tanus\.vscode\extensions>node inherit.js
+section { bname: 'CSE', hodname: 'RAM', strength: 45, sname: 'b5' }
+RAM
