@@ -16,3 +16,17 @@ function fun2()
 setImmediate(()=>{
      console.log("will be called immmediately after execution");
 });
+
+
+output:
+C:\Users\tanus\.vscode\extensions>node time.js
+will be called immmediately after execution
+will be called until it reaches timeout
+will be called until it reaches timeout
+will be called until it reaches timeout
+will be called until it reaches timeout
+will be called until it reaches timeout
+will be called until it reaches timeout
+will be called until it reaches timeout
+will be called until it reaches timeout
+Reached Timeout
