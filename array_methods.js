@@ -17,3 +17,10 @@ console.log("map() : " + roots );
 //reduce() method applies a function simultaneously against two values of the array (from left-to-right) as to reduce it to a single value.
 var total = [0, 1, 2, 3].reduce(function(a, b){ return a + b; }); 
 console.log("reduce() : " + total ); 
+
+
+output:
+C:\Users\tanus\.vscode\extensions>node array_methods.js
+filter() : 12,130,44
+map() : 1,2,3
+reduce() : 6
