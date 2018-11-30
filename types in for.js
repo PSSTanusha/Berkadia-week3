@@ -1,5 +1,5 @@
 //Basic for loop can be used for different purposes
-for (let i = 0; i < 10; i++) { 
+for (let i = 0; i < 5; i++) { 
     console.log("for loop");
 }
 
@@ -27,3 +27,23 @@ arr.forEach(element => {
 for (const value of iterable) {
   console.log(value);
 }
+
+
+
+output:
+C:\Users\tanus\.vscode\extensions>node types_in_for.js
+for loop
+for loop
+for loop
+for loop
+for loop
+cat
+dog
+fish
+1
+2
+3
+4
+10
+20
+30
