@@ -12,3 +12,10 @@ function func() {
   }
   
   msg();
+
+
+
+
+output:
+C:\Users\tanus\.vscode\extensions>node async-await.js
+Message: async-await
