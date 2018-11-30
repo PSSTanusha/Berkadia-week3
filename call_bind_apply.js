@@ -30,3 +30,12 @@ var person = {
     person2.hello2.apply(person2, arguments);
   }
   personContainer("world", "mars");
+
+
+output:
+C:\Users\tanus\.vscode\extensions>node call_bind_apply.js
+James Smith says hello world
+Jim Smith says hello world
+James Smith says hello world
+Jim Smith says hello world
+James Smith says hello mars
