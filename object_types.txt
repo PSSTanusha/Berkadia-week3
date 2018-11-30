@@ -1,0 +1,97 @@
+                        Different ways to create object in JavaScript
+
+Create JavaScript Object with Object Literal:
+  One of easiest way to create a javascript object is object literal, simply define the property and values 
+  inside curly braces as shown below
+  example:
+   let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+  Property accessors:
+    Properties of a javascript object can be accessed by dot notation or bracket notation as shown below
+    example:
+      let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+      console.log(bike.engine);     //Output: '937cc'
+      console.log(bike['maker']);   //Output: 'Ducati'
+  Adding property to the object
+     To add property to the already created object, no need to change the existing object literal, property can be
+     added later with dot notation as shown below
+     example:
+      let bike = {name: 'SuperSport', maker:'Ducati', engine:'937cc'};
+      bike.wheelType = 'Alloy';
+      console.log(bike.wheelType);   //Output: Alloy
+
+
+Create JavaScript Object with Constructor:
+   Constructor is nothing but a function and with help of new keyword, constructor function allows to 
+   create multiple objects of same flavor as shown below
+   example:
+     function Vehicle(name, maker) {
+      this.name = name;
+      this.maker = maker;
+     }
+    let car1 = new Vehicle(’Fiesta’, 'Ford’);
+    let car2 = new Vehicle(’Santa Fe’, 'Hyundai’)
+    console.log(car1.name);    //Output: Fiesta
+    console.log(car2.name);    //Output: Santa Fe
+   this and new keyword:
+     Every function, while executing has a reference to its current execution context called this (keyword).
+     The new keyword in front of any function turns the function call into constructor call
+
+Create JavaScript Object with create method:
+   Object.create() allowed to create object with more atrribute options like configurable, enumerable, writable 
+   and value as shown below
+   example:
+    let car = Object.create(Object.prototype,
+    {
+      name:{
+      value: 'Fiesta',
+      configurable: true,
+      writable: true,
+      enumerable: false
+    },
+    maker:{
+      value: 'Ford',
+      configurable: true,
+      writable: true,
+      enumerable: true
+    }
+   });
+   console.log(car.name)    //Output: Fiesta
+prototype:
+1.Every single object is built by constructor function.
+2.A constructor function makes an object linked to its own prototype.
+3.Prototype is an arbitrary linkage between the constructor function and object.
+
+Create JavaScript Object using ES6 classes:
+  ECMAScript 6 (newer version of javascript) supports class concept like any other Statically typed or object oriented language. So, object   can be created out of a class in javascript as well as shown below
+  example:
+    class Vehicle {
+     constructor(name, maker, engine) {
+      this.name = name;
+      this.maker =  maker;
+      this.engine = engine;
+     }
+    }
+   let bike1 = new Vehicle('Hayabusa', 'Suzuki', '1340cc');
+   let bike2 = new Vehicle('Ninja', 'Kawasaki', '998cc');
+   console.log(bike1.name);    //Output: Hayabusa
+   console.log(bike2.maker);   //Output: Kawasaki
+  methods to the JavaScript class:
+   Methods can be part of class while declaration or can be added later to the created object as shown below
+   Example:
+    class Vehicle {
+      constructor(name, maker, engine) {
+        this.name = name;
+        this.maker =  maker;
+        this.engine = engine;
+      }
+     start() {
+     console.log("Starting...");
+    }
+   }
+   let bike = new Vehicle('Hayabusa', 'Suzuki', '1340cc');
+   bike.start();    //Output: Starting...
+   /* Adding method brake() later to the created object */
+   bike.brake = function() {
+   console.log("Applying Brake...");
+  }
+  bike.brake();    //Output: Applying Brake...
