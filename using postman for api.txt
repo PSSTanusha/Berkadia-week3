@@ -1,0 +1,36 @@
+                                    Using postman for api's
+
+Postman is one of the most efficient applications for testing RESTful APIs. Most developers write a simple test and check the result of 
+the REST API. That is fine for a few APIs, but if we have many APIs to test it is better to automate these test cases. This post is an 
+introduction to automated testing using a simple API. There is command line version of Postman. It is called Newman. I will also cover 
+the procedure to test using Newman.
+
+This post covers:
+
+1.Environment
+2.Simple Test Scripts
+3.Setting up Newman
+4.Test Collections
+5.Environment and Collections
+In general, you should create one testing collection for each functional area, which may have many test cases. Then, you should create 
+an environment for dev, test, sit, prod, etc., as each environment may have a different configuration.
+
+Simple Test Scripts
+For demonstration purposes, I created two test cases. The first is to get an OAuth2 token from my local server. The second is to validate 
+the token. To validate the token, I will need to pass the token as query parameters. To copy and paste the token into the query parameters
+is not practical. In this case, I created an environment variable named access-token-password in the first test case. And pass this 
+variable to the second test case as follows:
+
+https://localhost:8082/external/validate?access_token={{access-token-password}}
+
+The following are the details about the test script:
+
+var jsonData = JSON.parse(responseBody);
+postman.setGlobalVariable("access_token", jsonData.access_token);
+postman.setEnvironmentVariable("access_token", jsonData.access_token, "OATH2");
+postman.setEnvironmentVariable("access-token-password", jsonData.access_token, "OAUTH2");
+tests["access_token is not null"] = jsonData.access_token !== null;
+tests["token_type == bearer"] = jsonData.token_type === "bearer";
+
+As you can see, the test script is in JavaScript. And the meanings of each line are self-explanatory as well. I set the environment 
+variable access-token-password to the OAuth2 environment.
